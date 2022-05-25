@@ -1,17 +1,14 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
+# bifur
+# tltltl
+# tltl
+# tl
+#       tlachinolliatl@gmail.com
+#########################
 library(shiny)
 
 # Interfaz de usuario para aplicación que grafíca retratos fase de matrices 2x2
-# con 3 coeficientes constantes y un coeficiente variable
-# el coeficiente variable se modifica mediante un slider
+# con coeficientes constantes entre -10:10 o con la variable epsilon.
+# el valor de la variable epsilon se modifica mediante un slider
 # de manera que se puedan visualizar las bifurcaciones
 # Puede utilizarse como material didáctico en cursos de Ecuaciones Diferenciales
 #####
@@ -49,12 +46,12 @@ shinyUI(fluidPage(
                         min = -5,
                         max = 5,
                         value = -5,
-                        step = 0.25,
+                        step = 0.5,
                         animate = T
                         )
         ),
 
-        # Show a plot of the generated distribution
+        # Muestra retrato fase del sistema y análisis de estabilidad
         mainPanel(
             plotOutput("retratoFase"),
             textOutput("tipo")

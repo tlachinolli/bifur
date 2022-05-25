@@ -1,3 +1,9 @@
+# bifur
+# tltltl
+# tltl
+# tl
+#       tlachinolliatl@gmail.com
+#########################
 # phase portrait ploter functions
 
 # función que recibe coeficientes y crea dataframe
@@ -15,6 +21,7 @@ createPortraitData <- function(a, c, b, d){
   dPortraitData
 }
 
+# Función que recibe dataframe regresado por createPortraitData y grafica retrato fase del sistema
 createPortrait <- function(dPortraitData){
   x <- dPortraitData$x
   y <- dPortraitData$y
@@ -25,7 +32,7 @@ createPortrait <- function(dPortraitData){
   plot(x, y, pch = ".")
   arrows(x, y, x + dx/n, y + dy/n, length = 0.1, col = "steelblue")
 }
-
+# Función que recibe coeficientes y regresa análisis de estabilidad en una oración corta
 analyseStability <- function(a, c, b, d){
   mA <- matrix(c(a, c, b, d), 2, 2)
   delta <- det(mA)
@@ -55,10 +62,10 @@ analyseStability <- function(a, c, b, d){
   if(delta > 0 && tau == 0){
       tipo <- "centro en el origen (periódica)"
   }
-  
   c(tipo, estabilidad)
 }
-
+# Función que recibe coeficiente y epsilon y regresa coeficiente o epsilon
+# dependiendo si está elegido epsilon o no
 checkEpsi <- function(selectedInput, epsilon){
   if(selectedInput == "eps"){
     a <- as.double(epsilon)

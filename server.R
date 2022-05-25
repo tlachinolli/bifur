@@ -1,41 +1,30 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+# bifur
+# tltltl
+# tltl
+# tl
+#       tlachinolliatl@gmail.com
+#########################
 library(shiny)
 source("functions.R")
-# Define la lógica requerida para grafícar un retrato fase interactivo
+# Define la lógica requerida para graficar un retrato fase interactivo
 shinyServer(function(input, output, session) {
+    values <- reactiveValues()  
+    observe(
+        {
+        values$a <-  checkEpsi(input$a, input$epsilon)
+        values$b <-  checkEpsi(input$b, input$epsilon)
+        values$c <-  checkEpsi(input$c, input$epsilon)
+        values$d <-  checkEpsi(input$d, input$epsilon)
+        }
+        ) 
 
     output$retratoFase <- renderPlot({
-        eps <- input$epsilon
-        a = input$a
-        b = input$b
-        c = input$c
-        d = input$d
-        a <- checkEpsi(a, eps)
-        b <- checkEpsi(b, eps)
-        c <- checkEpsi(c, eps)
-        d <- checkEpsi(d, eps)
-        dP <- createPortraitData(a, c, b, d)
+        dP <- createPortraitData(values$a, values$c, values$b, values$d)
         createPortrait(dP)
     })
     
     output$tipo <- renderText({
-        eps <- input$epsilon
-        a = input$a
-        b = input$b
-        c = input$c
-        d = input$d
-        a <- checkEpsi(a, eps)
-        b <- checkEpsi(b, eps)
-        c <- checkEpsi(c, eps)
-        d <- checkEpsi(d, eps)
-        analyseStability(a, c, b, d)
+        analyseStability(values$a, values$c, values$b, values$d)
     })
 
 })
