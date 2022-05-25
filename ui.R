@@ -26,22 +26,22 @@ shinyUI(fluidPage(
         sidebarPanel(
             fluidRow(
                 column(6,
-                    selectInput("a", "a", 
-                    choices = c(-10:10, "\u03B5"="eps"), selected = 0) # eps = input$epsilon
+                    selectInput("a", "a", # input id, label
+                    choices = c(-10:10, "\u03B5"="eps"), selected = 0)
                 ),
                 column(6,
-                    selectInput("c", "c", 
-                    choices = c(-10:10, "\u03B5"="eps"), selected = 2) # eps = input$epsilon
+                    selectInput("b", "b", 
+                    choices = c(-10:10, "\u03B5"="eps"), selected = 2) 
                 )
             ),
             fluidRow(
                 column(6,
-                    selectInput("b", "b", 
-                    choices = c(-10:10, "\u03B5"="eps"), selected = -2) # eps = input$epsilon
+                    selectInput("c", "c", 
+                    choices = c(-10:10, "\u03B5"="eps"), selected = -2) 
                 ),
                 column(6,
                     selectInput("d", "d", 
-                    choices = c(-10:10, "\u03B5"="eps"), selected = "eps") # eps = input$epsilon
+                    choices = c(-10:10, "\u03B5"="eps"), selected = "eps") 
                 )
             ),
             sliderInput("epsilon",
@@ -49,7 +49,9 @@ shinyUI(fluidPage(
                         min = -5,
                         max = 5,
                         value = -5,
-                        animate = T)
+                        step = 0.25,
+                        animate = T
+                        )
         ),
 
         # Show a plot of the generated distribution
