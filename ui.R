@@ -10,8 +10,8 @@
 library(shiny)
 
 # Interfaz de usuario para aplicación que grafíca retratos fase de matrices 2x2
-# con 3 coeficientes constantes y un coeficiente variable
-# el coeficiente variable se modifica mediante un slider
+# con coeficientes constantes entre -10:10 o con la variable epsilon.
+# el valor de la variable epsilon se modifica mediante un slider
 # de manera que se puedan visualizar las bifurcaciones
 # Puede utilizarse como material didáctico en cursos de Ecuaciones Diferenciales
 #####
