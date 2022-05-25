@@ -2,7 +2,7 @@
 
 ## Para qué usar
 
-Esta aplicación pretende servir cómo material de apoyo para el tema de Teoría de Bifurcación. Se puede utilizar para aclarar el concepto de bifurcación.
+Esta aplicación pretende servir como material de apoyo para el tema de Teoría de Bifurcación. Se puede utilizar para aclarar el concepto de bifurcación.
 
 En la siguiente imágen se muestran ejemplos de problemas para este tema.
 
