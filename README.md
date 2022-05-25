@@ -10,7 +10,6 @@ En la siguiente imágen se muestran ejemplos de problemas para este tema.
 
 ## Cómo usar
 bifur es una aplicación RShiny que permite ingresar los coeficientes de una matriz de 2 por 2, donde uno o más de estos coeficientes puede ser una variable epsilon.
-A continuación se muestran 
 
 El usuario puede hacer variar epsilon con ayuda de un slider o simplemente dandole clic al botón de play (ubicando debajo del slider a la derecha).
 
