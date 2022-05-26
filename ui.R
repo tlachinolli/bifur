@@ -5,6 +5,7 @@
 #       tlachinolliatl@gmail.com
 #########################
 library(shiny)
+library(shinythemes)
 
 # Interfaz de usuario para aplicación que grafíca retratos fase de matrices 2x2
 # con coeficientes constantes entre -10:10 o con la variable epsilon.
@@ -13,8 +14,8 @@ library(shiny)
 # Puede utilizarse como material didáctico en cursos de Ecuaciones Diferenciales
 #####
 
-shinyUI(fluidPage(
-
+shinyUI(fluidPage( 
+    theme = shinytheme("darkly"),
     # Application title
     titlePanel("Visualizador de bifurcaciones"),
 
@@ -48,7 +49,9 @@ shinyUI(fluidPage(
                         value = -5,
                         step = 0.5,
                         animate = T
-                        )
+                        ),
+            #shinythemes::themeSelector()  # <--- Add this somewhere in the UI
+            
         ),
 
         # Muestra retrato fase del sistema y análisis de estabilidad

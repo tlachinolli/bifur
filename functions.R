@@ -28,9 +28,12 @@ createPortrait <- function(dPortraitData){
   dx <- dPortraitData$dx
   dy <- dPortraitData$dy
   n <- dPortraitData$n
-  par(pty="s") # establece gráfica cuadrada
-  plot(x, y, pch = ".")
-  arrows(x, y, x + dx/n, y + dy/n, length = 0.1, col = "steelblue")
+  par(pty="s", bg = "#303030") # establece gráfica cuadrada y color del theme darkly
+  plot(x, y, pch = ".", axes = F, col = "#3498db", col.lab = "white")
+  box(col = 'white')
+  axis(1, col = 'white', col.axis = 'white', col.ticks = 'white')
+  axis(2, col = 'white', col.axis = 'white', col.ticks = 'white')
+  arrows(x, y, x + dx/n, y + dy/n, length = 0.1, col = "#00bc8c")
 }
 # Función que recibe coeficientes y regresa análisis de estabilidad en una oración corta
 analyseStability <- function(a, c, b, d){
