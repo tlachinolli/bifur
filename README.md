@@ -21,7 +21,7 @@ La aplicación nos da un análisis de la estabilidad del sistema en una oración
 
 Se muestra el retrato fase correspondiente al sistema de ecuaciones diferenciales x'= Ax donde A es la matriz de 2 por 2 ingresada.
 
-Para la matriz predeterminada podemos ver que: 
+Para la matriz predeterminada (la misma que ejercicio 3 en imagen Ejemplos) podemos ver que: 
 
 * Cuando epsilon es cero tenemos un centro.
 * Para epsilon menor que cero tenemos retratos estables
@@ -32,3 +32,4 @@ Lo anterior nos indica que epsilon igual a cero es un un punto de bifurcación d
 ### Próximamente
 
 * Mostrar solución del sistema en un punto (x0,y0) al dar clic en la gráfica en dicho punto.
+* Mostrar vectores coloreados con gradiente dependiendo de velocidad en dicho putno.
